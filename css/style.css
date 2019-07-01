@@ -179,7 +179,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgb(29, 0, 255, 0.8), rgb(29, 0, 255, 0.8)), url(/img/daria-nepriakhina-736026-unsplash.jpg);
+    background: linear-gradient(rgb(29, 0, 255, 0.8), rgb(29, 0, 255, 0.8)), url(../img/daria-nepriakhina-736026-unsplash.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
