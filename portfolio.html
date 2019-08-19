@@ -1,0 +1,234 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MMT4</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link href="https://vjs.zencdn.net/7.5.4/video-js.css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="js/sketch.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+
+        <nav>
+
+
+
+
+
+            <ul>
+                <li>
+                    <a href="#">ABOUT ME</a>
+                </li>
+                <li>
+                    <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+                <li>
+
+                    <a href="#">CONTACT</a>
+                </li>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+            </ul>
+
+
+        </nav>
+        <div class="header2">
+            <h4><span>This is my interactive sketch <br />
+                    Use the sliders to change a bit! </span></h4>
+        </div>
+
+    </header>
+    <div class="clear"></div>
+
+
+    <div class="container2">
+        <div id="sketch-holder">
+            <!-- Our sketch will go here! -->
+
+        </div>
+
+        <div class="invisible">
+            <h2>kan sketch niet afspelen op schermen kleiner dan 768 pix</h2>
+        </div>
+
+        <div class="clear"></div>
+
+        <h5>Speed</h5>
+        <div class="slider-speed"></div>
+        <h5>Color</h5>
+        <div class="slider-color"></div>
+        <h5>Background</h5>
+        <div class="slider-background"></div>
+    </div>
+
+    <div class="clear"></div>
+
+    <footer>
+
+        <h3>What can I do for you?<br>
+            Let’s get in touch</h3>
+
+        <a href="#nav"><span>CONTACT</span></a>
+        <div class="expandable" id="nav">
+            <div class="form">
+                <form>
+                    <input type="button" value="Go back!" onclick="history.back()">
+                    <input type="text" name="field1" placeholder="Your Name" />
+                    <input type="email" name="field2" placeholder="Email Address" />
+                    <textarea name="field3" placeholder="Type your Message"></textarea>
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script>
+        var colors = [];
+        var driehoeken = [];
+        var doorgang;
+        var offsetDriehoekKleur = 0;
+        var offsetAchtergrondKleur = 0;
+        var offsetY = 0;
+        var richtingx = 1;
+        var driehoekFill = true;
+        var maxDriehoeken = 10;
+
+        function setup() {
+
+            var canvas = createCanvas(1000, 400);
+            canvas.parent('sketch-holder');
+            colors = [19];
+            colors[0] = color("#FFD64F");
+            colors[1] = color("#FF9A0C");
+            colors[2] = color("#FF6300");
+            colors[3] = color("#FF402E");
+            colors[4] = color("#FF1267");
+            colors[5] = color("#FF28D8");
+            colors[6] = color("#C933FF");
+            colors[7] = color("#7139FF");
+            colors[8] = color("#2F39FF");
+            colors[9] = color("#278DFF");
+            colors[10] = color("#24D4FF");
+            colors[11] = color("#29FFE4");
+            colors[12] = color("#29FF95");
+            colors[13] = color("#2FFF48");
+            colors[14] = color("#A6FF2A");
+            colors[15] = color("#FFF10E");
+            colors[16] = color("#29FF95");
+            colors[17] = color("#2FFF48");
+            colors[18] = color("#A6FF2A");
+
+            for (var i = 0; i < maxDriehoeken; i++) {
+                var breedte = random(15, 70);
+                driehoeken.push(new Driehoek(createVector(random(50, width - 50), random(50, height - 50)), breedte, breedte, int(random(0, 4)), random(-2, 2)));
+            }
+
+
+        }
+
+        function draw() {
+            background(0 + offsetAchtergrondKleur);
+            noStroke();
+            for (var i = 0; i < driehoeken.length; i++) {
+                var d = driehoeken[i];
+                d.update();
+                d.teken();
+            }
+        }
+
+        function Driehoek(tempMidden, tempBreedte, tempHoogte, tempStartkleur, tempDraaing) {
+            var midden, punt1, punt2, punt3;
+            var richtingy, breedte, hoogte, draaing, draaien;
+            var startkleur;
+            midden = tempMidden;
+            startkleur = tempStartkleur;
+
+            richtingy = 1;
+            hoogte = tempHoogte;
+            breedte = tempBreedte;
+            draaing = tempDraaing;
+
+            punt1 = createVector(0 - breedte / 2, 0 + hoogte / 2);
+            punt2 = createVector(0 + breedte / 2, 0 + hoogte / 2);
+            punt3 = createVector(0, 0 - hoogte / 2);
+
+            this.teken = function() {
+                push();
+                translate(midden.x, midden.y);
+                rotate(radians(draaien));
+
+                if (driehoekFill == true) {
+                    fill(colors[startkleur + offsetDriehoekKleur]);
+                    noStroke();
+                } else {
+                    noFill();
+                    stroke(255 - offsetAchtergrondKleur);
+                }
+                triangle(punt1.x, punt1.y, punt2.x, punt2.y, punt3.x, punt3.y);
+
+                if (driehoekFill) {
+                    fill(255, 100);
+                }
+                triangle(punt1.x, punt1.y, punt2.x, punt2.y, 0, 0);
+                if (driehoekFill) {
+                    fill(0, 100);
+                }
+                triangle(punt1.x, punt1.y, punt3.x, punt3.y, 0, 0);
+                pop();
+                draaien = draaien + draaing;
+            }
+
+            this.update = function() {
+                midden.x = midden.x + richtingx;
+                midden.y = midden.y + richtingy;
+
+                if (midden.x > width + breedte / 2) {
+                    midden.x = -20;
+                }
+                if (midden.y > height + hoogte / 2) {
+                    midden.y = -20;
+                }
+            }
+        }
+
+        function updateMiddle() {
+            richtingx = uivars.offSetY;
+            offsetDriehoekKleur = uivars.offSetX;
+            offsetAchtergrondKleur = uivars.offsetAchtergrondKleur;
+        }
+
+        function toggleStroke() {
+            driehoekFill = !driehoekFill;
+        }
+    </script>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src='https://vjs.zencdn.net/7.5.4/video.js'></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+
+
+</body>
+
+
+</html>
