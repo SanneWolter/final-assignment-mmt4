@@ -1,0 +1,1015 @@
+section {
+    display: block;
+}
+
+#wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1088px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background: transparent;
+}
+
+a {
+    list-style: none;
+}
+
+nav {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100px;
+    background: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    margin-left: 10%;
+    text-align: center;
+}
+
+
+/* linkjes staan naast elkaar door display inline */
+
+nav a {
+    display: inline;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 100px;
+    color: #CC0085;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo {
+    position: fixed;
+    margin: 0.75em;
+    height: 160px;
+    width: 160px;
+    float: left;
+    background: url("../img/logo.png");
+    background-size: 75px;
+    background-repeat: no-repeat;
+
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.switch {
+    float: right;
+    display: inline;
+    padding: 2em;
+}
+
+.switch ul {
+    float: right;
+    width: 60px;
+    height: 34px;
+    cursor: pointer;
+    color: white;
+    background-color: #FFAFE3;
+    border-radius: 34px;
+}
+
+
+
+.switch ul.active li {
+    transform: translateX(30px);
+}
+
+
+.switch ul li span {
+    display: block;
+    height: 26px;
+    width: 26px;
+    margin: 3px;
+
+}
+
+.switch ul li span:nth-child(1) {
+    background: white;
+    border-radius: 50%;
+}
+
+.dark {
+    background: #000;
+    color: white;
+}
+
+.dark .switch ul {
+    background-color: white;
+}
+
+
+.dark .hero,
+.dark footer {
+    background: linear-gradient(rgb(29, 0, 255, 0.8), rgb(29, 0, 255, 0.8)), url("../img/daria-nepriakhina-736026-unsplash.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.dark .rect p,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark .ui-accordion-header,
+.dark nav a,
+.dark .thumb a p,
+.dark footer .btn {
+    color: white;
+}
+
+.dark nav,
+.dark .thumb a,
+.dark .person,
+.dark .btn,
+.dark .switch ul li span:nth-child(1) {
+    background-color: #1D00FF;
+}
+
+.dark .square {
+    background-color: black;
+}
+
+.dark .scrollmenu p,
+.dark #forward,
+.dark #rewind,
+.dark #toggle {
+    color: #0076FF;
+}
+
+.dark .scrollmenu .btn {
+    background-color: #0076FF;
+}
+
+.dark .ui-accordion-header {
+    border-color: white;
+}
+
+.dark .logo {
+    background: url("../img/logo_wit.png");
+    background-repeat: no-repeat;
+
+}
+
+.dark .leer {
+    background: url("../img/leer_wit.png");
+    background-repeat: no-repeat;
+}
+
+.dark .codeer {
+    background: url("../img/codeer_wit.png");
+    background-repeat: no-repeat;
+}
+
+.dark .speel {
+    background: url("../img/speel_wit.png");
+    background-repeat: no-repeat;
+}
+
+.hero {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(255, 175, 227, 0.8), rgb(204, 0, 133, 0.8)), url("../img/daria-nepriakhina-736026-unsplash.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-inner {
+    width: 1088px;
+    margin: 0 auto;
+}
+
+.head-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    margin: 0 auto;
+    color: white;
+
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #CC0085;
+    font-size: 1.1em;
+    padding-top: 3em;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #CC0085;
+    font-size: 1.1em;
+}
+
+p {
+    font-family: "Montserrat Medium", sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+    color: white;
+}
+
+.thumb {
+    max-width: 1088px;
+    margin-top: -100px;
+    background: chocolate;
+    margin-left: 3em;
+}
+
+.thumb a {
+    display: block;
+    width: calc(960px / 3);
+    height: calc(960px / 3);
+    background: #F4F2FF;
+    float: left;
+    margin: 0 5px 10px 5px;
+    border-radius: 5%;
+}
+
+.leer {
+    position: absolute;
+    margin: 5em;
+    height: 160px;
+    width: 160px;
+    float: left;
+    background: url("../img/leer.png");
+    background-size: 160px;
+    background-repeat: no-repeat;
+}
+
+.codeer {
+    position: absolute;
+    margin: 5em;
+    height: 160px;
+    width: 160px;
+    float: left;
+    background: url("../img/codeer.png");
+    background-size: 160px;
+    background-repeat: no-repeat;
+}
+
+.speel {
+    position: absolute;
+    margin: 5em;
+    height: 160px;
+    width: 160px;
+    float: left;
+    background: url("../img/speel.png");
+    background-size: 160px;
+    background-repeat: no-repeat;
+}
+
+
+.thumb a p {
+    text-align: center;
+    color: #CC0085;
+    margin-top: 16em;
+}
+
+#accordion {
+    padding-top: 40px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.asci {
+    margin-right: 10px;
+}
+
+.ui-accordion-header {
+    color: #FFAFE3;
+    border: 1px solid #FFAFE3;
+    padding: 10px 20px;
+
+}
+
+.ui-accordion-header-active,
+.ui-state-hover {
+    color: #CC0085;
+    border: 1px solid #CC0085;
+}
+
+.ui-state-hover {
+    color: #CC0085;
+    border: 1px solid #CC0085;
+}
+
+.ui-accordion-header-active span {
+    transform: rotate(90deg);
+    display: inline-block;
+}
+
+.support {
+    width: 100%;
+    height: 30em;
+    padding-top: 2.5em;
+    margin: 0 auto;
+}
+
+.rect {
+    width: 50%;
+    height: 9em;
+    float: left;
+
+}
+
+.rect p {
+    color: #CC0085;
+    font-size: 1.25em;
+}
+
+.btn {
+    display: inline-block;
+    position: relative;
+    float: right;
+    padding: 10px 20px;
+    background: #CC0085;
+    color: white;
+    font-family: "Montserrat Medium", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.25em;
+}
+
+.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    height: 12.5em;
+}
+
+.square {
+    width: 460px;
+    height: 200px;
+    display: inline-block;
+    background-color: white;
+}
+
+.person {
+    width: 400px;
+    height: 200px;
+    background-color: #F4F2FF;
+    border-radius: 5px;
+}
+
+.pf {
+    width: 150px;
+    height: 9em;
+    float: left;
+    margin: 1.5em;
+}
+
+.pf img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.scrollmenu .btn {
+    margin-top: 1em;
+    margin-right: 5.5em;
+    padding: 10px 20px;
+    background: #CC0085;
+    color: white;
+    font-family: "Montserrat Medium", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+
+}
+
+.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.scrollmenu p {
+    color: #FFAFE3;
+}
+
+/*.scrollmenu a:hover {
+    background-color: #777;
+}*/
+
+footer {
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(to right, transparent, #CC0085), url("../img/nicole-wolf-1339717-unsplash.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+footer h2,
+footer p {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+footer h2 span {
+    font-family: "Playfair Display";
+    font-size: 4em;
+    display: block;
+}
+
+footer p {
+    font-family: "Montserrat Medium", sans-serif;
+    font-size: 1em;
+    margin-top: 2em;
+}
+
+footer .btn {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    background: white;
+    color: #FFAFE3;
+    font-family: "Montserrat Medium", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 2em 0;
+    border-radius: 5px;
+    font-size: 1.25em;
+    right: 27em;
+    top: 3em;
+}
+
+.vjs-icon-placeholder::before {
+    display: none;
+}
+
+.video-js {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.video-wrapper {
+    position: relative;
+}
+
+#toggle,
+#rewind,
+#forward {
+    border-radius: 50%;
+    cursor: pointer;
+    background-position: center;
+    position: absolute;
+    background-color: white;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+#toggle {
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    left: 49%;
+    color: #CC0085;
+    font-size: 2em;
+}
+
+#rewind {
+    width: 60px;
+    height: 60px;
+    top: 53%;
+    left: 40%;
+    color: #FFAFE3;
+    font-size: 1em;
+}
+
+
+#forward {
+    width: 60px;
+    height: 60px;
+    top: 53%;
+    left: 60%;
+    color: #FFAFE3;
+    font-size: 1em;
+}
+
+
+
+.video-wrapper:hover #toggle {
+    display: block;
+}
+
+.video-wrapper:hover #rewind {
+    display: block;
+}
+
+.video-wrapper:hover #forward {
+    display: block;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+  z-index: 9910;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+  z-index: 9910;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 9910;
+}
+
+/* Modal Content */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 315px;
+    height: 200px;
+    z-index: 9910;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+
+.modal-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 4em;
+    color: transparent;
+    background-image: linear-gradient(to right, #CC0085, #F3FFB2, #0ff, #0f0, #1D00FF);
+    -webkit-background-clip: text;
+    animation: animateText 4s linear infinite;
+    background-size: 1000%;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 9910;
+}
+
+@keyframes animateText {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1150px){
+    .thumb a{
+            width: calc(750px / 3);
+    height: calc(750px / 3);
+    }
+    
+     .speel,
+    .codeer,
+    .leer {
+        background-size: 115px;
+        margin: 4em;
+    }
+    
+    .thumb a p{
+        margin-top: 12em;
+    }
+    
+    footer .btn{
+        right: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 850px){
+    .logo, .dark .logo{
+        background-size: 65px;
+    }
+    
+    h1{
+            font-size: 2.5em;
+    }
+    
+    p{
+            font-size: .85em;
+    }
+    
+    .thumb a p {
+    margin-top: 15em;
+}
+    
+    .head-container{
+        max-width: 650px;
+    }
+    .speel,
+    .codeer,
+    .leer, 
+    .dark .speel,
+    .dark .codeer,
+    .dark .leer{
+        margin: 3em;
+    }
+    
+    #toggle {
+    width: 70px;
+    height: 70px;
+    top: 45%;
+    }
+    
+    #rewind, #forward {
+    width: 50px;
+    height: 50px;
+    top: 49%;
+    }
+    
+    .btn{
+            font-size: 1em;
+    }
+}
+
+
+@media only screen and (max-width: 825px) {
+    nav {
+        height: 5em;
+       margin-left: 30px;
+        width: 700px;
+    }
+
+    nav a {
+            font-size: 0.8em;
+    line-height: 7em;
+    }
+
+    .logo, .dark .logo {
+           height: 60px;
+    width: 60px;
+   margin: 0.5em;
+    background-size: 60px;
+    }
+
+    .switch {
+        padding: 1.5em;
+    }
+    
+    .switch ul.active li {
+    transform: translateX(24px);
+    }
+
+    .switch ul {
+        width: 45px;
+        height: 24px;
+    }
+
+    .switch ul li span {
+        height: 16px;
+        width: 16px;
+    }
+    
+    .hero{
+            height: 400px;
+    }
+    
+    .thumb{
+            margin-top: -60px;
+            margin-left: 6em;
+    max-width: 768px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h3,
+    h4 {
+        font-size: 0.8em;
+    }
+
+    p,
+    .thumb a p,
+    .rect p,
+    footer p {
+        font-size: 0.9em;
+        margin-top: 0.9em;
+    }
+
+    #wrapper {
+      max-width: 768px;
+    }
+
+    .thumb a {
+        width: calc(375px / 3);
+        height: calc(375px / 3);
+    }
+
+    .thumb a p {
+        margin-top: 7em;
+    }
+
+    .speel,
+    .codeer,
+    .leer,
+    .dark .speel,
+    .dark .codeer,
+    .dark .leer{
+        background-size: 75px;
+        margin: 1.5em;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.9em;
+        right: 50px;
+    }
+    
+    #rewind, #forward {
+    width: 50px;
+        height: 50px;
+        display: block;
+    }
+    
+    #toggle {
+    width: 70px;
+    height: 70px;
+        display: block;
+    }
+
+    .support {
+        height: 20em;
+    }
+
+    .pf img,
+    .pf {
+        display: none;
+    }
+    
+    .rect{
+            height: 7em;
+    }
+
+    .square {
+        width: 325px;
+        height: 150px;
+    }
+
+    .square h3 {
+        font-size: 0.9em;
+        padding: 3em 2em 0.5em 2em;
+        text-align: center;
+    }
+
+    .scrollmenu p {
+        text-align: center;
+    }
+
+    .person {
+        width: 300px;
+        height: 150px;
+    }
+
+    .scrollmenu .btn {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        height: 325px;
+    }
+
+    footer .btn {
+        padding: 5px 10px;
+        font-size: 0.9em;
+        right: 22em;
+    }
+
+    footer h2 span {
+        font-size: 2em;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    nav {
+        height: 3.5em;
+        margin-left: 12px;
+        width: 350px;
+    }
+
+    nav a {
+        font-size: 0.6em;
+        line-height: 6em;
+        padding: 0.2em;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .switch {
+        padding: 1em;
+    }
+
+    .switch ul {
+        width: 45px;
+        height: 24px;
+    }
+
+    .switch ul li span {
+        height: 16px;
+        width: 16px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h3,
+    h4 {
+        font-size: 0.8em;
+    }
+
+    p,
+    .thumb a p,
+    .rect p,
+    footer p {
+        font-size: 0.8em;
+        margin-top: 0.9em;
+    }
+
+    #wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .thumb{
+        margin-top: -40px;
+    margin-left: 3em;
+    }
+
+    .thumb a {
+        width: calc(375px / 3);
+        height: calc(375px / 3);
+    }
+
+    .thumb a p {
+        margin-top: 8em;
+    }
+
+    .speel,
+    .codeer,
+    .leer,
+    .dark .speel,
+    .dark .codeer,
+    .dark .leer{
+        background-size: 75px;
+        margin: 1.5em;
+        height: 100px;
+    width: 100px;
+    }
+
+    .checkVideo {
+    width: 50px;
+    height: 50px;
+    }
+    
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    .support {
+        height: 20em;
+    }
+
+    .pf img,
+    .pf {
+        display: none;
+    }
+
+    .square {
+        width: 325px;
+        height: 150px;
+    }
+
+    .square h3 {
+        font-size: 0.9em;
+        padding: 3em 2em 0.5em 2em;
+        text-align: center;
+    }
+
+    .scrollmenu p {
+        text-align: center;
+    }
+
+    .person {
+        width: 300px;
+        height: 150px;
+    }
+
+    .scrollmenu .btn {
+        padding: 5px 10px;
+        font-size: 0.9em;
+        margin-right: 8em;
+    }
+
+    footer {
+        height: 325px;
+    }
+
+    footer .btn {
+        padding: 5px 10px;
+        font-size: 0.9em;
+        right: 8em;
+    }
+
+    footer h2 span {
+        font-size: 2em;
+    }
+
+}
